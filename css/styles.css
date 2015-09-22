@@ -267,6 +267,37 @@ header {
       #content-second #content-second-right .sublist li a:hover {
         color: #31302b; }
 
+#content-third img {
+  max-width: 100%;
+  border: 1px solid #ECECEC; }
+
+/*============================
+/*
+/* FOOTER 
+/*
+/*=============================*/
+footer.wrapper {
+  display: block;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  max-width: 1240px;
+  width: 80%; }
+  footer.wrapper #footerleft {
+    display: inline-block;
+    width: 50%;
+    float: left; }
+  footer.wrapper #footerright {
+    display: inline-block;
+    width: 50%;
+    float: right;
+    text-align: right; }
+    footer.wrapper #footerright ul li {
+      color: #305281; }
+      footer.wrapper #footerright ul li strong {
+        color: #31302b; }
+      footer.wrapper #footerright ul li a {
+        margin-left: 5px; }
+
 /*============================
 /*
 /* RESPONSIVE 
@@ -300,6 +331,10 @@ header {
     width: 100%; }
 
   #content-second #content-second-left, #content-second #content-second-right {
+    width: 100%; }
+
+  footer.wrapper #footerleft, footer.wrapper #footerright {
+    margin-top: 5%;
     width: 100%; } }
 /*phone*/
 @media only screen and (max-width: 500px) {

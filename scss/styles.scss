@@ -281,6 +281,45 @@ article{
 			}
 		}
 	}
+	#content-third{
+		img{
+			max-width: 100%;
+			border: 1px solid $dis-grey;
+		}
+	}
+
+/*============================
+/*
+/* FOOTER 
+/*
+/*=============================*/
+footer.wrapper{
+	display: block;
+	margin: 0 auto;
+	background-color:#FFFFFF;
+	max-width:1240px;
+	width: 80%;
+	#footerleft{
+		display:inline-block;
+		width: 50%;
+		float: left;
+	}
+	#footerright{
+		display: inline-block;
+		width: 50%;
+		float: right;
+		text-align: right;
+		ul{
+			li{
+				strong{
+					color: $dis-black;
+				}
+				color: $dis-blue;
+				a{margin-left: 5px;}
+			}
+		}
+	}
+}
 
 /*============================
 /*
@@ -329,6 +368,12 @@ article{
 	}
 	#content-second{
 		#content-second-left,#content-second-right{width: 100%;}
+	}
+	footer.wrapper{
+		#footerleft, #footerright{
+			margin-top: 5%;
+			width: 100%;
+		}
 	}
 }
 /*phone*/
