@@ -1,0 +1,80 @@
+@import 'includes/vars';
+@import 'includes/mixins';
+html {
+  box-sizing: border-box;
+  font-family: Ubuntu;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  line-height:22px;
+  font-size: 14px;
+}
+/*============================
+/*
+/* GENERAL 
+/*
+/*=============================*/
+
+h1{
+  font-size: 20px;
+  margin: 0;
+}
+h2{
+	font-size: 18px;
+}
+h3{
+	font-size:15px;
+}
+input{
+	height: 40px;
+	padding-left: 5px;
+}
+label{
+	line-height: 30px;
+}
+button{
+	background: $dis-blue;
+	height:40px;
+	border:0;
+	padding:0 10px;
+	color: #FFFFFF;
+	border-radius:5px;
+	border: 1px solid $dis-grey;
+}
+button:hover{
+	cursor: pointer;
+}
+a{
+	text-decoration:none;
+	color: $dis-blue;
+}
+a:hover{
+	color: $dis-black;
+	cursor: pointer;
+}
+#bodywrapper{
+	display:block;
+	margin: 0 auto;
+	width:80%;
+	max-width: 1240px;
+	background-color: #FFFFFF;
+}
+.wrapper{
+	display: block;
+	max-width: 1240px;
+	width: 100%;
+	padding: 2%;
+}
+body{
+	margin: 0;
+	background-color:lightgrey;
+}
+ul{
+	margin: 0;
+	padding:0;
+	list-style:none;
+}
+article{
+	margin:2% 0;
+}
+.clear{clear:both;}
