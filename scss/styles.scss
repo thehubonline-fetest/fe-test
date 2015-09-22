@@ -7,7 +7,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
   line-height:22px;
-  font-size: 14px;
+  font-size: $font-normal;
 }
 /*============================
 /*
@@ -16,18 +16,20 @@ html {
 /*=============================*/
 
 h1{
-  font-size: 20px;
+  font-size: $font-x-large;
   margin: 0;
 }
 h2{
-	font-size: 18px;
+	font-size: $font-large;
 }
 h3{
-	font-size:15px;
+	font-size:$font-medium;
 }
 input{
 	height: 40px;
 	padding-left: 5px;
+	border: 1px solid $dis-grey;
+	font-style: italic;
 }
 label{
 	line-height: 30px;
@@ -38,11 +40,12 @@ button{
 	border:0;
 	padding:0 10px;
 	color: #FFFFFF;
-	border-radius:5px;
+	@include border-right-radius(5px);
 	border: 1px solid $dis-grey;
 }
 button:hover{
 	cursor: pointer;
+	background-color:#3C9DD8;
 }
 a{
 	text-decoration:none;
@@ -67,7 +70,7 @@ a:hover{
 }
 body{
 	margin: 0;
-	background-color:lightgrey;
+	background-color:$dis-grey;
 }
 ul{
 	margin: 0;
@@ -78,3 +81,259 @@ article{
 	margin:2% 0;
 }
 .clear{clear:both;}
+
+/*============================
+/*
+/* HEADER 
+/*
+/*=============================*/
+	header{
+		position: relative;
+		margin-top:2%;
+		width: 100%;
+		display: inline-block;
+		#logowrapper{
+			width: 20%;
+			float: left;
+			display: inline-block;
+			#logo{
+				max-width:100%;
+			}
+		}
+		#menuwrapper{
+			width: 80%;
+			float: right;
+			#upper-menu{
+				display: inline-block;
+				width: 100%;
+				#upper-menu-list{
+					display: inline-block;
+					width: 60%;
+					list-style: none;
+					margin: 0;
+					text-align: right;
+						li{
+							display:inline-block;
+							height: 40px;
+							color: red;
+							line-height: 68px;
+							margin-right: 5%;
+							color: $dis-blue;
+							a{
+								text-transform:uppercase;
+								color: inherit;
+							}
+							a:hover{
+								color:$dis-black;
+							}
+						}
+				}
+				#searchbox{
+					display: inline-block;
+					width: 40%;
+					float: right;
+					text-align: right;
+					input{
+						width: 70%;
+						float: left;
+						border: 1px solid $dis-grey;
+						@include border-left-radius(5px);
+					}
+					button{
+						border: none;
+						float: right;
+						width: 30%;
+						min-width: 50px;
+						.button-search{margin-left: 5px;}
+					}
+				}
+			}
+			nav{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				ul{
+					list-style: none;
+					margin: 0;
+					li{
+						margin-left: 5px;
+						display :inline-block;
+						text-transform: uppercase;
+					}
+				}
+			}
+
+		}
+	}
+	#slider{
+		img{
+			max-width: 100%;
+		}
+	}
+/*============================
+/*
+/* CONTENT 
+/*
+/*=============================*/
+#content-first{
+		#content-first-left{
+			display: inline-block;
+			width: 75%;
+			float: left;
+			padding-right: 5%;
+		}
+		#content-first-right{
+			display:inline-block;
+			width: 25%;
+			float: right;
+			padding: 2%;
+			background: $dis-grey;
+			border: 1px solid darkgrey;
+			form{
+				span{
+					color: grey;
+					font-style:italic;
+				}
+				padding: 2%;
+				label{display: block;}
+				input{
+					display: block; 
+					width: 100%;
+					@include border-radius(5px);
+				}
+				button{
+					@include border-radius(5px);
+					margin-top: 5%;
+					width: 100%;
+					border: 1px solid $dis-grey;
+					.buttontitle{
+						margin-left: 10px;
+						color: #FFFFFF;
+						font-style: normal;
+					}
+				}
+			}
+		}
+		#content-bottom-left{
+			ul{
+				padding:0;
+				list-style:none;
+				display: inline-block;
+				width: 100%;
+				li{
+					display: inline-block;;
+					padding:0% 2% 2% 0;
+					width: 15%;
+					float: left;
+					img{
+						background: #F3F3F3;
+						padding: 10%;
+						border: 1px solid $dis-grey;
+						@include border-radius(5px);
+						max-width: 100%;
+					}
+				}
+				li:hover{cursor:pointer;}
+			}
+		}
+
+	}
+	#content-second{
+		background-color: $dis-lightgrey;
+		#content-second-left{
+			width: 45%;
+			display: inline-block;
+			float: left;
+			img{max-width: 100%;}
+			.subtitle{padding: 2% 0;}
+			.sublist{
+				li{ 
+					i{color: $dis-green;}
+					a{
+						margin-left: 10px;
+						color: $dis-blue;
+					}
+					a:hover{
+						color:$dis-black;
+					}
+				}
+			}
+		}
+		#content-second-right{
+			width: 45%;
+			display: inline-block;
+			float: right;
+			img{
+				max-width: 100%;
+			}
+			.subtitle{padding: 2% 0;}
+			.sublist{
+				li{ 
+					position:relative;
+					left:-10px;
+					i{color: $dis-green;}
+					a{
+						margin-left: 10px;
+						color: $dis-blue;
+					}
+					a:hover{color: $dis-black;}
+				}
+			}
+		}
+	}
+
+/*============================
+/*
+/* RESPONSIVE 
+/*
+/*=============================*/
+/*laptop*/
+@media only screen  and (max-width : 1200px) {
+
+	header{
+		#logowrapper{
+			position: relative;
+			bottom: 20px;
+		}
+	}
+	
+
+}
+/*portrait*/
+@media only screen  and (max-width : 850px) {
+	h2, ul,.subtitle,h1{text-align: center;}
+	header{
+		#logowrapper{
+			position: static;
+			#logo{min-width: 100px;}
+		}	
+		#menuwrapper{
+			#upper-menu{
+				#upper-menu-list{
+					width: 100%;
+					display:none;
+
+				}
+				#searchbox{
+					width: 80%;
+					.button-search{display: none;}
+				}
+			}
+			nav{
+				display: none;	
+			}
+		}
+	}
+	#content-first{
+		#content-first-left,#content-first-right{width: 100%;}
+	}
+	#content-second{
+		#content-second-left,#content-second-right{width: 100%;}
+	}
+}
+/*phone*/
+@media only screen  and (max-width : 500px) {
+
+	.button-search{display: none;}
+
+}
